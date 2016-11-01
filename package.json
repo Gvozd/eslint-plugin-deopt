@@ -1,7 +1,7 @@
 {
   "name": "eslint-plugin-deopt",
   "version": "0.0.1",
-  "description": "Plugin for eslint for find possible deoptimized code",
+  "description": "Plugin for ESLint for find possible deoptimized code",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,8 +14,7 @@
     "eslint",
     "optimize",
     "optimization",
-    "deoptimization\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[Cdeoptimize",
-    "\u001b[3~optimization",
+    "deoptimize",
     "deoptimization"
   ],
   "author": "Gvozd",
@@ -23,5 +22,16 @@
   "bugs": {
     "url": "https://github.com/Gvozd/eslint-plugin-deopt/issues"
   },
-  "homepage": "https://github.com/Gvozd/eslint-plugin-deopt#readme"
+  "homepage": "https://github.com/Gvozd/eslint-plugin-deopt#readme",
+  "engines": {
+    "node": ">=4.6.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=3.8.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.9.1",
+    "eslint-config-loris": "^6.0.0",
+    "mocha": "^3.1.2"
+  }
 }
