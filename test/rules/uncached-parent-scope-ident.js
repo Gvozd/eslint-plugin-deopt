@@ -17,20 +17,20 @@ ruleTester.run('uncached-parent-scope-ident', rule, {
                 foo = 456;
                 baz = foo + 1;
             }
-        `
-        // {
-        //     code: `
-        //         var foo = 123;
-        //         function bar() {
-        //             var baz = foo + 1
-        //             ({foo} = {foo:456});
-        //             baz = foo + 1;
-        //         }
-        //     `,
-        //     parserOptions: {
-        //         ecmaVersion: 6
-        //     }
-        // },
+        `,
+        {
+            code: `
+                var foo = 123;
+                function bar() {
+                    var baz = foo + 1
+                    ({foo} = {foo:456});
+                    baz = foo + 1;
+                }
+            `,
+            parserOptions: {
+                ecmaVersion: 6
+            }
+        }
         // {
         //     code: `
         //         var foo = 123;

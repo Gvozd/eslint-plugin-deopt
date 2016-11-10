@@ -16,18 +16,18 @@ export function create(context) {
             const outerUsages =
                 context.getScope().through
                     .reduce((hash, reference) => {
-                        const {identifier, identifier: {name}} = reference;
+                        const {identifier: {name}} = reference;
                         hash[name] = hash[name] || [];
-                        hash[name].push(identifier);
+                        hash[name].push(reference);
                         return hash;
                     }, {});
-            for (const identifier in outerUsages) {
-                outerUsages[identifier]
-                    .reduce((arr, node) => {
-                        if (isInAssignmentExpression(node)) {
+            for (const name in outerUsages) {
+                outerUsages[name]
+                    .reduce((arr, reference) => {
+                        if (reference.isWrite()) {
                             arr.push([]);
                         } else {
-                            arr[arr.length - 1].push(node);
+                            arr[arr.length - 1].push(reference.identifier);
                         }
                         return arr;
                     }, [[]])
@@ -40,8 +40,4 @@ export function create(context) {
             }
         }
     };
-}
-
-function isInAssignmentExpression(node) {
-    return node.parent.type === 'AssignmentExpression';
 }
