@@ -2,9 +2,9 @@
   "name": "eslint-plugin-deopt",
   "version": "0.0.1",
   "description": "Plugin for ESLint for find possible deoptimized code",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "lint": "eslint src test",
+    "lint": "eslint .",
     "test": "mocha",
     "watch": "mocha --watch",
     "build": "babel -d ./lib ./src",
@@ -36,6 +36,7 @@
   "devDependencies": {
     "babel-cli": "6.18.0",
     "babel-plugin-transform-es2015-destructuring": "6.18.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "6.18.0",
     "babel-register": "6.18.0",
     "eslint": "3.9.1",
     "eslint-config-loris": "6.0.0",

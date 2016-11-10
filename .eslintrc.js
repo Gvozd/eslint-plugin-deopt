@@ -1,4 +1,7 @@
 module.exports = {
+    "parserOptions": {
+        "sourceType": "module"
+    },
     "extends": "loris/es6",
     "root": true,
     "env": {
