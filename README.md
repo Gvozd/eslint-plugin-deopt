@@ -13,6 +13,8 @@
 
 > Plugin for ESLint for find possible deoptimized code
 
+## In progress, not stable
+
 ## Usage
 
 1. Install `eslint-plugin-deopt` as a dev-dependency:
@@ -28,7 +30,8 @@
       - deopt
     ```
 
-### Rules
+## Rules
+* uncached-parent-scope-ident
 
 
 ## Author
