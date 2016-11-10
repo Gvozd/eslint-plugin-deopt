@@ -1,6 +1,6 @@
 'use strict';
 
-const rule = require('../../lib/rules/uncached-parent-scope-ident');
+const rule = require('../../src/rules/uncached-parent-scope-ident');
 const RuleTester = require('eslint').RuleTester;
 const ruleTester = new RuleTester();
 

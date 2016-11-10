@@ -1,3 +1,9 @@
 /.idea
 /node_modules
 /test
+/lib
+.npmignore
+.travis.yml
+.babelrc
+.eslintrc.js
+eslint-plugin-deopt-*

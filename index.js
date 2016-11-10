@@ -2,6 +2,6 @@
 
 module.exports = {
     rules: {
-        'parent-scope-ident': require('./lib/rules/parent-scope-ident')
+        'parent-scope-ident': require('./src/rules/parent-scope-ident')
     }
 };
